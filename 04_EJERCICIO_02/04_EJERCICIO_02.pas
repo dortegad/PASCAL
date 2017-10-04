@@ -1,28 +1,18 @@
-PROGRAM EJER2;
-	USES CRT;
-	VAR
-		numeroLeido:real;
-		acumulado:real;
-		cuentaNumeros:integer;
-		media:real;
+program cuadradoperfecto (input,output);
+   var
+       numero:integer; (*Numero que se lee para determinar
+                       si es cuadrado perfecto*)
 
-		cont:integer;
-BEGIN
-	ClrScr;
-	cuentaNumeros := 0;
-	acumulado := 0;
-	media := 0;
-	numeroLeido := 0;
-	repeat
-		WRITE('INTRODUCE NUMERO : ');
-		READLN(numeroLeido);
-		if (numeroLeido > 0) then
-		begin
-			acumulado := acumulado + numeroLeido;
-			cuentaNumeros := cuentaNumeros + 1;
-		end;
-	until (numeroLeido < 0);
-	media := acumulado / cuentaNumeros;
-	writeln(' LA MEDIA ES : ', media:0:2 );
-	READLN();
-END.
+begin
+
+{Lectura de datos. Se comprueba que el número sea positivo}
+  writeln('Introduzca un numero');
+  read(numero);
+  while numero>=0 do
+    begin
+      if sqr(round(sqrt(n)))=numero
+        then writeln(numero,' es cuadrado perfecto')
+        else writeln(numero,' no es cuadrado perfecto');
+      read(numero)
+    end
+end.
